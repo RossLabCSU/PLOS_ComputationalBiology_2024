@@ -13,6 +13,7 @@ This directory contains all necessary information and code to reproduce the data
 | Biopython | 1.79 |
 | statsmodels | 0.13.2 |
 | tqdm | 4.64.1 |
+| upsetplot | 0.8.0 |
 
 To reproduce figures and tables in the paper:
 1. Download the required data from Figshare (NOTE: this is currently only available as a privately shared link for peer review purposes. If you do not have this link, the code shared here will fail).
