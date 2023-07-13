@@ -9,7 +9,7 @@ ordered_aas_df = {'Archaea':'LVEAGISDRTKPFNYQMHWC',
                 'Viruses':'LASVGETKDIRNPFQYMHWC'}
 domains = ['Archaea','Bacteria','Eukaryota','Viruses']
 domain_to_tablenum = {'Archaea':'TableS2', 'Bacteria':'TableS3', 'Eukaryota':'TableS4', 'Viruses':'TableS5'}
-domain_to_fignum = {'Archaea':'Fig1A', 'Bacteria':'Fig1B', 'Eukaryota':'Fig1C', 'Viruses':'Fig1D'}
+domain_to_fignum = {'Archaea':'FigS1A', 'Bacteria':'FigS1B', 'Eukaryota':'FigS1C', 'Viruses':'FigS1D'}
 
 aa_strings = []
 for res1 in amino_acids:
