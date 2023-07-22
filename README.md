@@ -1,5 +1,7 @@
 # Reproduction of Data in [Cascarina (2023)](add link when published)
 
+Important disclaimer: all code and resulting data have not yet been peer reviewed and are subject to change.
+
 This directory contains all necessary information and code to reproduce the data in [Cascarina (2023)](add link when published). Below is a list of dependencies and associated version numbers used for testing and data analysis:
 
 | Package | Version |
