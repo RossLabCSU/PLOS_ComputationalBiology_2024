@@ -16,7 +16,7 @@ This directory contains all necessary information and code to reproduce the data
 | upsetplot | 0.8.0 |
 
 To reproduce figures and tables in the paper:
-1. Download the required data from Zenodo (NOTE: this is currently only available as a privately shared link for peer review purposes. If you do not have this link, the code shared here will fail).
+1. Download the required data from Zenodo (NOTE: this is currently only available as a privately shared link provided in the cover letter for peer review purposes. If you do not have this link, the code shared here will fail).
 2. In a single, main directory, extract all files from zipped archives in separate directories with names identical to those of the zipped archives. For example, the files contained in "Archaea.zip" should be unzipped into a folder called "Archaea". At the end of this process, the following directories should exist and should be kept in a single location:
     - Archaea
     - Archaea_SCRAMBLED
@@ -29,7 +29,9 @@ To reproduce figures and tables in the paper:
     - GOAfiles
     - SecondaryLCDs_by_LCDcategory
     - Pfam_Data
-3. Download all files from this Github repository. Extract all files into the main directory: unlike the extracted files above, these files should not exist in a separate directory.
+    - Observed_vs_Scrambled_LCDfrequency_Statistics
+    - GOterm_Results_C-rich_LCDs_ModelOrganisms
+3. Download all files from this Github repository. Extract all files into the main directory from Step 2: unlike the extracted files above, these files should not exist in a separate directory.
 4. Run the "Reproducibility_BATCH.bat" file from the command line to run all analyses in succession.
     - NOTE: Some of the commands in the batch file may take up to 1 day to run. The first two commands in particular may take ~15-17hrs on a basic desktop computer. However, these files can be run concurrently, so you can run them in parallel and delete them in the batch file prior to running the batch file if preferred. These two commands must finish execution before running the remaining commands in the batch file.
 
