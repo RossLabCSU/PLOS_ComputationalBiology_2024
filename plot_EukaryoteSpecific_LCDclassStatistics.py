@@ -44,7 +44,7 @@ def individual_barplots(df, label, fig_label):
     fig = plt.gcf()
 
     fig.set_size_inches(4, 6)
-    plt.savefig(fig_label + '_EukaryoteSpecific_LCDclassStatistics_Barplot.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
+    plt.savefig(fig_label + '_EukaryoteSpecific_LCDclassStatistics_Barplot.tif', bbox_inches='tight', dpi=600)
     plt.close()
 
 
