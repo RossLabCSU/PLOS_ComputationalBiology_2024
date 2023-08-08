@@ -105,7 +105,7 @@ def plotting(shares_df, sample_sizes, domain):
         
     fig = plt.gcf()
     fig.set_size_inches(7, 5)
-    plt.savefig('Fig9A_' + domain + '_Mean_SecondaryLCD_Shares.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
+    plt.savefig('Fig9A_' + domain + '_Mean_SecondaryLCD_Shares.tif', bbox_inches='tight', dpi=600)
     plt.close()
 
         
