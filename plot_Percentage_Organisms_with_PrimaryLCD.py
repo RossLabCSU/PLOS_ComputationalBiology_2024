@@ -34,7 +34,7 @@ def plotting(df):
     ax.legend(bbox_to_anchor=(1,1), loc=2, handletextpad=0.3)
     fig = plt.gcf()
     fig.set_size_inches(12, 4)
-    plt.savefig('Fig1A_PrimaryLCDs_PercOrganismsWithLCD.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
+    plt.savefig('Fig1A_PrimaryLCDs_PercOrganismsWithLCD.tif', bbox_inches='tight', dpi=600)
     plt.close()
         
 
