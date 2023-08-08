@@ -147,7 +147,7 @@ def barplot(df, domain, top_x_threshold, ordered_numprots):
     plt.ylabel('Whole-proteome % of\nResidues within LCDs', fontname='Arial', fontsize=14)
     fig = plt.gcf()
     fig.set_size_inches(14, 4)
-    plt.savefig(domain_to_filenum[domain] + '_' + domain + '_Top3organisms_PrimaryLCDs_PerResidueOccupancy_Barplot.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
+    plt.savefig(domain_to_filenum[domain] + '_' + domain + '_Top3organisms_PrimaryLCDs_PerResidueOccupancy_Barplot.tif', bbox_inches='tight', dpi=600)
     plt.close()
 
         
