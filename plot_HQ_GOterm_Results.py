@@ -87,7 +87,7 @@ def plotting(df, goterm_freq_threshold):
 
     fig = plt.gcf()
     fig.set_size_inches(12, 4)
-    plt.savefig('Fig3B_HQ_GOterm_Results.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
+    plt.savefig('Fig3B_HQ_GOterm_Results.tif', bbox_inches='tight', dpi=600)
     plt.close()
 
 
