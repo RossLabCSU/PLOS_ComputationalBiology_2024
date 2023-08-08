@@ -87,9 +87,9 @@ def plot_primAA_barplots(vals, sorted_prim_aas, data_labels, yaxis_label, proteo
     fig = plt.gcf()
     fig.set_size_inches(5, 3.25)
     if proteome2 == 'Percentile':
-        plt.savefig('Fig10A_' + proteome1 + '_' + yaxis_label + '_PrimaryLCD_PerResidueOccupancy_Barplot.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression': 'tiff_lzw'})
+        plt.savefig('Fig10A_' + proteome1 + '_' + yaxis_label + '_PrimaryLCD_PerResidueOccupancy_Barplot.tif', bbox_inches='tight', dpi=600)
     else:
-        plt.savefig('Fig10B_' + proteome1 + '_vs_' + proteome2 + '_' + yaxis_label + '_PrimaryLCD_PerResidueOccupancy_Barplot.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression': 'tiff_lzw'})
+        plt.savefig('Fig10B_' + proteome1 + '_vs_' + proteome2 + '_' + yaxis_label + '_PrimaryLCD_PerResidueOccupancy_Barplot.tif', bbox_inches='tight', dpi=600)
     plt.close()
     
     
@@ -228,12 +228,12 @@ def plotting(df, proteome1, proteome2, max_offdiag, min_offdiag, center, mask_di
     plt.ylim(20, 0)
     fig = plt.gcf()
     if proteome2 == 'AVERAGE':
-        plt.savefig('Fig10E_' + proteome1 + '_vs_' + proteome2 + '_PerResidueLCDoccupancy_DifferenceMatrix.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression': 'tiff_lzw'})
+        plt.savefig('Fig10E_' + proteome1 + '_vs_' + proteome2 + '_PerResidueLCDoccupancy_DifferenceMatrix.tif', bbox_inches='tight', dpi=600)
     else:
         if proteome2 == 'PERCENTILE':
-            plt.savefig('Fig10D_' + proteome1 + '_vs_' + proteome2 + '_PerResidueLCDoccupancy_DifferenceMatrix.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression': 'tiff_lzw'})
+            plt.savefig('Fig10D_' + proteome1 + '_vs_' + proteome2 + '_PerResidueLCDoccupancy_DifferenceMatrix.tif', bbox_inches='tight', dpi=600)
         else:
-            plt.savefig('Fig10C_' + proteome1 + '_vs_' + proteome2 + '_PerResidueLCDoccupancy_DifferenceMatrix.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression': 'tiff_lzw'})
+            plt.savefig('Fig10C_' + proteome1 + '_vs_' + proteome2 + '_PerResidueLCDoccupancy_DifferenceMatrix.tif', bbox_inches='tight', dpi=600)
     plt.close()
 
     
