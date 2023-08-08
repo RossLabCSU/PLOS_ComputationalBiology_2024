@@ -211,10 +211,10 @@ def plotting(lcd_df, seqs_df, all_lcd_classes, prot_to_commonname):
             
         # CAN FAIL FOR SOME PROTEINS IF THEY ARE TOO LONG
         try:
-            plt.savefig(organism_to_filenum[org] + '_' + org + '_AllKeratins_IsoformCartoon.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
+            plt.savefig(organism_to_filenum[org] + '_' + org + '_AllKeratins_IsoformCartoon.tif', bbox_inches='tight', dpi=600)
         except:
             fig.set_size_inches(2*(length/200), 1)
-            plt.savefig(organism_to_filenum[org] + '_' + org + '_AllKeratins_IsoformCartoon.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
+            plt.savefig(organism_to_filenum[org] + '_' + org + '_AllKeratins_IsoformCartoon.tif', bbox_inches='tight', dpi=600)
         plt.close()
         
         
