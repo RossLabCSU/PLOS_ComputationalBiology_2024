@@ -160,7 +160,7 @@ def plot_xlinks(pos1_vals, pos2_vals, dataset, line_color, prim_aas, domain):
     plt.xticks([])
     sci_name, *junk = dataset.split(' (')
     fig.set_size_inches(5.5, 1.75)
-    plt.savefig('Fig8B_' + domain + '_' + sci_name.replace(' ', '-') + '_LetterMap.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
+    plt.savefig('Fig8B_' + domain + '_' + sci_name.replace(' ', '-') + '_LetterMap.tif', bbox_inches='tight', dpi=600)
     plt.close()
 
 
