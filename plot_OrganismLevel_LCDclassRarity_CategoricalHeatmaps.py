@@ -53,7 +53,7 @@ def plotting(df, domain):
     plt.ylim(20, -0.5)
 
     fig = plt.gcf()
-    plt.savefig(domain_to_fignum[domain] + '_' + domain + '_OrganismLevel_LCDclassRarity_CategoricalHeatmap.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
+    plt.savefig(domain_to_fignum[domain] + '_' + domain + '_OrganismLevel_LCDclassRarity_CategoricalHeatmap.tif', bbox_inches='tight', dpi=600)
     plt.close()
         
 
