@@ -48,7 +48,7 @@ def main():
 
             plot_xlinks(pos1_vals, pos2_vals, sci_name, colors[color_index], prim_classes, domain, index)
             if (index == 1 and domain in ['Archaea', 'Bacteria']) or (index==4 and domain in ['Archaea', 'Bacteria', 'Viruses']):
-                plt.savefig(domain_to_filenum[domain] + '_' + domain + str(plot_index) + '_SharedLetterMap.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
+                plt.savefig(domain_to_filenum[domain] + '_' + domain + str(plot_index) + '_SharedLetterMap.tif', bbox_inches='tight', dpi=600)
                 plt.close()
                 plot_index += 1
             index += 1
