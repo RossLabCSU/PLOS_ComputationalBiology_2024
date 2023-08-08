@@ -175,7 +175,7 @@ def plot_heatmap(df, domain, max_offdiag, cat, use_normed_scale, use_statistical
         fig_label = fig_labels[param_tup]
     else:
         fig_label = 'Extra'
-    plt.savefig(fig_label + '_' + domain + '_Original-vs-Scrambled-Proteomes_Heatmap_' + cat + '_' + use_normed_scale + '_' + use_statistical_significance + '.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
+    plt.savefig(fig_label + '_' + domain + '_Original-vs-Scrambled-Proteomes_Heatmap_' + cat + '_' + use_normed_scale + '_' + use_statistical_significance + '.tif', bbox_inches='tight', dpi=600)
     plt.close()
 
 
