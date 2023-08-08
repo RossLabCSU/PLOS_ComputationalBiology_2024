@@ -103,7 +103,7 @@ def piechart(freqs, pfams, domain):
     plt.setp(legend.get_texts(), fontsize=8, va='bottom')
     fig = plt.gcf()
     fig.set_size_inches(6, 4)
-    plt.savefig(leaders[domain] + '_' + domain + '_PieChart_NumberPerResidueOccupancyCategories.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
+    plt.savefig(leaders[domain] + '_' + domain + '_PieChart_NumberPerResidueOccupancyCategories.tif', bbox_inches='tight', dpi=600)
     plt.close()
 
     
