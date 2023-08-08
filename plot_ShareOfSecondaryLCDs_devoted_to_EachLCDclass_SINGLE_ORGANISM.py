@@ -92,7 +92,7 @@ def plotting(shares_df, sample_sizes, proteome, fig_label):
         
     fig = plt.gcf()
     fig.set_size_inches(7, 5)
-    plt.savefig(fig_label + '_' + proteome + '_SecondaryLCDs_SharePlot.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
+    plt.savefig(fig_label + '_' + proteome + '_SecondaryLCDs_SharePlot.tif', bbox_inches='tight', dpi=600)
     plt.close()
 
 
