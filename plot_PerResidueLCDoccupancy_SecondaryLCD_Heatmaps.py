@@ -72,7 +72,7 @@ def plot_heatmap(df, domain, category, max_offdiag):
     
     plt.ylim(20, 0)
     fig = plt.gcf()
-    plt.savefig(domain_to_filenum[domain] + '_' + domain + '_SecondaryLCDs_PerResidueOccupancy_Heatmap.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
+    plt.savefig(domain_to_filenum[domain] + '_' + domain + '_SecondaryLCDs_PerResidueOccupancy_Heatmap.tif', bbox_inches='tight', dpi=600)
     plt.close()
 
         
