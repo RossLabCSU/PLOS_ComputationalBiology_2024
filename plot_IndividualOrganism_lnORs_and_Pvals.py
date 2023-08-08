@@ -164,7 +164,7 @@ def plot_heatmap(df, proteome_of_interest, fig_label):
     
     plt.ylim(20, 0)
     fig = plt.gcf()
-    plt.savefig(fig_label + '_' + proteome_of_interest + '_Original-vs-Scrambled-Proteome_Heatmap_lnORvalues.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
+    plt.savefig(fig_label + '_' + proteome_of_interest + '_Original-vs-Scrambled-Proteome_Heatmap_lnORvalues.tif', bbox_inches='tight', dpi=600)
     plt.close()
     
     
@@ -186,7 +186,7 @@ def plot_binary_heatmap(df, proteome_of_interest, fig_label):
     
     plt.ylim(20, 0)
     fig = plt.gcf()
-    plt.savefig(fig_label + '_' + proteome_of_interest + '_Original-vs-Scrambled-Proteome_Heatmap_Pvalues_BinaryStatSigClassification.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
+    plt.savefig(fig_label + '_' + proteome_of_interest + '_Original-vs-Scrambled-Proteome_Heatmap_Pvalues_BinaryStatSigClassification.tif', bbox_inches='tight', dpi=600)
     plt.close()
     
     
