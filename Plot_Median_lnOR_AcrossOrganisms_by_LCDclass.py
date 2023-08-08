@@ -105,7 +105,7 @@ def plot_heatmap(df, domain):
     plt.ylim(20, 0)
     fig = plt.gcf()
     fig_label = fig_labels[domain]
-    plt.savefig(fig_label + '_' + domain + '_Median-lnOR_Actual-vs-Scrambled-Proteomes_Heatmap.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
+    plt.savefig(fig_label + '_' + domain + '_Median-lnOR_Actual-vs-Scrambled-Proteomes_Heatmap.tif', bbox_inches='tight', dpi=600)
     plt.close()
 
 
