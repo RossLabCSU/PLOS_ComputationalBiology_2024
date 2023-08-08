@@ -38,7 +38,7 @@ def main():
             plt.yticks([0, 2, 4, 6, 8, 10])
 
         plt.title(organism)
-        plt.savefig(organism_to_filenum[organism] + '_' + organism + '_KeratinAssociatedProteins_UpSetPlot.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
+        plt.savefig(organism_to_filenum[organism] + '_' + organism + '_KeratinAssociatedProteins_UpSetPlot.tif', bbox_inches='tight', dpi=600)
         plt.close()
 
 
