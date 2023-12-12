@@ -69,7 +69,7 @@ def plot_matrix(matrix, data_type):
         plt.plot((0, 100), (i, i), color='grey')
     fig = plt.gcf()
     fig.set_size_inches(14, 8)
-    plt.savefig('FigS2A_VariedWindowSize_' + data_type + '.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
+    plt.savefig('FigS2A_VariedWindowSize_' + data_type + '.tif', bbox_inches='tight', dpi=600)
     plt.close()
     
     
@@ -105,7 +105,7 @@ def plot_categorical_matrix(matrix, data_type):
         plt.plot((0, 100), (i, i), color='white')
     fig = plt.gcf()
     fig.set_size_inches(14, 8)
-    plt.savefig('FigS2B_VariedWindowSize_' + data_type + '_CategoricalWinner.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
+    plt.savefig('FigS2B_VariedWindowSize_' + data_type + '_CategoricalWinner.tif', bbox_inches='tight', dpi=600)
     plt.close()
 
 
