@@ -72,7 +72,7 @@ def plot_stripplot(master_df):
     plt.ylabel('Percentage of Organisms\nwith Significant Enrichment', fontname='Arial', fontsize=14)
     fig = plt.gcf()
     fig.set_size_inches(2, 6)
-    plt.savefig('Fig2A_All_LCDclasses_PercentOrganismsWithSigEnrichment_Stripplot.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
+    plt.savefig('Fig2A_All_LCDclasses_PercentOrganismsWithSigEnrichment_Stripplot.tif', bbox_inches='tight', dpi=600)
     plt.close()
     
         
@@ -142,7 +142,7 @@ def plotting(domain, goterms, go_categories, perc_orgs, lcd_classes, plotting_ca
     plt.xlim(-1, num_terms_plotting)
     index = domains.index(domain)
     fig_label = fig_labels[index]
-    plt.savefig(fig_label + '_' + domain + '_Top' + str(num_terms_plotting) + '_GOterms_' + plotting_category + '.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
+    plt.savefig(fig_label + '_' + domain + '_Top' + str(num_terms_plotting) + '_GOterms_' + plotting_category + '.tif', bbox_inches='tight', dpi=600)
     plt.close()
     
         
