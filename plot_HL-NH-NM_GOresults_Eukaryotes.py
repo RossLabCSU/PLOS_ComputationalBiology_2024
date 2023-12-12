@@ -122,7 +122,7 @@ def plotting(domain, goterms, go_categories, perc_orgs, lcd_classes, plotting_ca
 
     fig.set_size_inches(20, 5)
     plt.xlim(-1, num_terms_plotting)
-    plt.savefig(fig_label + '_' + lcd_class_of_interest + '-LCDs_' + domain + '_Top' + str(num_terms_plotting) + '_GOterms.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
+    plt.savefig(fig_label + '_' + lcd_class_of_interest + '-LCDs_' + domain + '_Top' + str(num_terms_plotting) + '_GOterms.tif', bbox_inches='tight', dpi=600)
     plt.close()
     
 
