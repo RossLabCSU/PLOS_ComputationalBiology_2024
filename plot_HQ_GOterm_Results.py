@@ -3,26 +3,15 @@ import os
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-all_proteomes = ['UP000006548_3702', 'UP000009136_9913', 'UP000001940_6239', 'UP000002254_9615', 'UP000000437_7955', 'UP000002195_44689', 'UP000000803_7227', 'UP000000539_9031', 'UP000005640_9606', 'UP000000589_10090', 'UP000002311_559292', 'UP000008227_9823', 'UP000002494_10116']
-all_abbrevs = ['Athaliana', 'Btaurus', 'Celegans', 'Clupusfamiliaris', 'Drerio', 'Ddiscoideum', 'Dmelanogaster', 'Ggallusdomesticus', 'Hsapiens', 'Mmusculus', 'Scerevisiae', 'Sscrofadomesticus', 'Rnorvegicus']
-proteomes_to_abbrevs = {all_proteomes[i]:all_abbrevs[i] for i in range(len(all_proteomes))}
-
-amino_acids = 'ACDEFGHIKLMNPQRSTVWY'
-aa_strings = []
-for res1 in amino_acids:
-    for res2 in amino_acids:
-        if res1 == res2:
-            continue
-        aa_strings.append(res1+res2)
-        
 def main():
 
-    goterm_freq_threshold = 15
+    goterm_freq_threshold = 30
 
     output = open('TableS7_Summarized_GOtermResults_HQproteins.tsv', 'w')
-    counts, goterms, output = get_GO_results('HQprots_GOterm_RESULTS.tsv', goterm_freq_threshold, output, 'All HQ Proteins')
-    counts_Xexcluded, goterms_Xexcluded, output = get_GO_results('HQprots-WITHOUT-QX-XQ-HX-XH-LCDs_GOterm_RESULTS.tsv', goterm_freq_threshold, output, 'QX-XQ-HX-XH Proteins Excluded')
-    counts_allQexcluded, goterms_allQexcluded, output = get_GO_results('_HQprots-WITHOUT-QrichLCD_GOterm_RESULTS.tsv', goterm_freq_threshold, output, 'Proteins with Q-rich Primary LCDs Excluded')
+    counts, goterms, go_categories, output = get_GO_results('Eukaryota_GOterm_Summary_AllOrganisms_AllClasses.tsv', goterm_freq_threshold, output, 'All HQ Proteins')
+    counts_Xexcluded, goterms_Xexcluded, go_categories_Xexcluded, output = get_GO_results('HQ_GOresults_QX-XQ-HX-XH_excluded_GOterm_Summary.tsv', goterm_freq_threshold, output, 'QX-XQ-HX-XH Proteins Excluded')
+    counts_allQexcluded, goterms_allQexcluded, go_categories_allQexcluded, output = get_GO_results('HQ_GOresults_QrichPrimary_excluded_GOterm_Summary.tsv', goterm_freq_threshold, output, 'Proteins with Q-rich Primary LCDs Excluded')
+    counts_allHexcluded, goterms_allHexcluded, go_categories_allHexcluded, output = get_GO_results('HQ_GOresults_HrichPrimary_excluded_GOterm_Summary.tsv', goterm_freq_threshold, output, 'Proteins with H-rich Primary LCDs Excluded')
     
     output.close()
     
@@ -31,16 +20,22 @@ def main():
         'Category':[]}
         
     df = structure_data(counts, goterms, df, goterm_freq_threshold, 'All HQ Proteins')
+    df = structure_data(counts_allHexcluded, goterms_allHexcluded, df, goterm_freq_threshold, 'Proteins Also Containing\nH-rich LCD Excluded')
     df = structure_data(counts_Xexcluded, goterms_Xexcluded, df, goterm_freq_threshold, 'Proteins Also Containing\nQX/XQ/HX/XH LCD Excluded')
     df = structure_data(counts_allQexcluded, goterms_allQexcluded, df, goterm_freq_threshold, 'Proteins Also Containing\nQ-rich LCD Excluded')
 
-    plotting(df, goterm_freq_threshold)
+    plotting(df, goterm_freq_threshold, go_categories)
     
     
 def structure_data(counts, goterms, df, goterm_freq_threshold, category):
 
-    filtered_goterms = [goterms[i] for i in range(len(goterms)) if counts[i] >= goterm_freq_threshold]
-    filtered_counts = [count for count in counts if count >= goterm_freq_threshold]
+    if category == 'All HQ Proteins':
+        filtered_goterms = [goterms[i] for i in range(len(goterms)) if counts[i] >= goterm_freq_threshold]
+        filtered_counts = [count for count in counts if count >= goterm_freq_threshold]
+    else:
+        filtered_goterms = [goterm for goterm in goterms if goterm in df['GO term']]
+        filtered_counts = [count for i, count in enumerate(counts) if goterms[i] in df['GO term']]
+
     
     for i, goterm in enumerate(filtered_goterms):
         count = filtered_counts[i]
@@ -51,12 +46,15 @@ def structure_data(counts, goterms, df, goterm_freq_threshold, category):
     return df
     
     
-def plotting(df, goterm_freq_threshold):
+def plotting(df, goterm_freq_threshold, go_categories):
 
-    colors = ['#014122', '#018141', '#00C060']
+    tick_colors = ['#be0119', '#00035b', '#0b5509'] # SCARLET, DARK BLUE, FOREST
+    cats = ['BP', 'MF', 'CC']
+    tick_cmap = {cat:tick_colors[i] for i, cat in enumerate(cats)}
+    
     colors = sns.color_palette('Greens', 10)
     colors = colors[::-1]
-    colors = [colors[0], colors[3], colors[6]]
+    colors = [colors[0], colors[2], colors[4], colors[6]]
 
     sns.barplot(x='GO term', y='Count', data=df, hue='Category', palette=colors)
     ax = plt.gca()
@@ -80,6 +78,12 @@ def plotting(df, goterm_freq_threshold):
 
     plt.xticks([x for x in range(len(labels))], labels=labels, rotation=90, fontname='Arial', fontsize=10)
     plt.yticks(fontname='Arial', fontsize=10)
+    
+    ax = plt.gca()
+    xticklabels = ax.get_xticklabels()
+    for i, label in enumerate(go_categories[:len(xticklabels)]):
+        xticklabels[i].set_color(tick_cmap[label])
+    
     plt.xlabel('Enriched GO term', fontname='Arial', fontsize=12)
     plt.ylabel('# of Organisms with GO Term\nSignificantly Enriched', fontname='Arial', fontsize=12)
 
@@ -87,60 +91,41 @@ def plotting(df, goterm_freq_threshold):
 
     fig = plt.gcf()
     fig.set_size_inches(12, 4)
-    plt.savefig('Fig3B_HQ_GOterm_Results.tif', bbox_inches='tight', dpi=600)
+    plt.savefig('Fig5B_HQ_GOterm_Results.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
     plt.close()
-
-
-def get_GO_results(file_ending, goterm_freq_threshold, output, data_label):
-
-    minimum_depth = 4
-    all_enriched_terms = []
-    org_count = 0
     
-    for file in os.listdir('.'):
-        if not file.endswith(file_ending):
-            continue
-            
-        file_info = file.split('_')
-        uniprot_acc = file_info[0] + '_' + file_info[1]
-        organism = file_info[2]
-            
-        org_count += 1
-        h = open(file)
-        header = h.readline().rstrip().split('\t')
-        header.insert(0, 'Protein Set for GO-term Analysis')
-        header.insert(0, 'Organism')
-        header.insert(0, 'UniProt Organism ID')
-        if data_label == 'All HQ Proteins' and org_count == 1:
-            output.write('\t'.join(header) + '\n')
-        
-        enriched_terms = []
-        for line in h:
-            items = line.rstrip().split('\t')
-            e_or_p = items[2]
-            goterm = items[3].rstrip()
-            depth = int(items[12])
-            if depth < minimum_depth:
-                continue
-            sidak_pval = float(items[15])
-            if sidak_pval < 0.05:
-                enriched_terms.append(goterm)
-                output.write('\t'.join([uniprot_acc, organism, data_label] + items) + '\n')
-        h.close()
-        
-        all_enriched_terms += enriched_terms
-                
-        fileinfo = file.replace('_HQprots_GOterm_RESULTS.tsv', '')
-        
+    
+def get_GO_results(goterm_file, goterm_freq_threshold, output, data_label):
+
+    # minimum_depth = 4     # RESTRICTION IMPOSED WHEN GATHERING GO-TERM RESULTS.
+    all_enriched_terms = []
+
+    h = open(goterm_file)
+    header = h.readline().rstrip().split('\t')
+    header.insert(0, 'Protein Set for GO-term Analysis')
+
+    if data_label == 'All HQ Proteins':
+        output.write('\t'.join(header) + '\n')
+
     counts = []
     goterms = []
-    for goterm in set(all_enriched_terms):
-        counts.append(all_enriched_terms.count(goterm))
+    go_categories = []
+    for line in h:
+        items = line.rstrip().split('\t')
+        lcd_class = items[1]
+        if lcd_class != 'HQ':
+            continue
+        goterm = items[4].rstrip()
+        num_orgs_significant = int(items[5])
         goterms.append(goterm)
-        
-    counts, goterms = zip(*sorted(zip(counts, goterms), reverse=True))
+        counts.append(num_orgs_significant)
+        go_categories.append(items[3])
+        output.write('\t'.join([data_label] + items) + '\n')
+    h.close()
+
+    counts, goterms, go_categories = zip(*sorted(zip(counts, goterms, go_categories), reverse=True))
     
-    return counts, goterms, output
+    return counts, goterms, go_categories, output
     
 
 if __name__ == '__main__':
