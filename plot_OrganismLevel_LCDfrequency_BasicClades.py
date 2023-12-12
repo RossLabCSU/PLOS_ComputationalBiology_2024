@@ -96,7 +96,7 @@ def subplots_second_taxonomy_items(plotting_df, domain, samplesize_df):
     fig.text(-0.025, 0.5, 'Percentage of Organisms with' + r'$\geq$' + '1 LCD', va='center', rotation='vertical', fontname='Arial', fontsize=16)
     fig.text(0.5, -0.02, 'Basic Clade', ha='center', fontname='Arial', fontsize=16)
     plt.tight_layout(pad=0.2)
-    plt.savefig(fig_labels[domain] + '_' + domain + '_OrganismLevel_LCDfrequency_BasicClades_Top10cladesOnly.tif', bbox_inches ='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
+    plt.savefig(fig_labels[domain] + '_' + domain + '_OrganismLevel_LCDfrequency_BasicClades_Top10cladesOnly.tif', bbox_inches ='tight', dpi=600)
     plt.close()  
     
     
