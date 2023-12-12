@@ -28,7 +28,7 @@ def plot_clustermap_domains(matrix, domains_of_life, method):
     fig = plt.gcf()
     fig.set_size_inches(4, 3)
     
-    plt.savefig('FigS22A_Domains_PairwiseMeanDistance_' + method + '_Clustermap.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
+    plt.savefig('FigS22A_Domains_PairwiseMeanDistance_' + method + '_Clustermap.tif', bbox_inches='tight', dpi=600)
     plt.close()
     
     
@@ -49,7 +49,7 @@ def plot_clustermap_clades(matrix, domains_of_life, method):
     fig = plt.gcf()
     fig.set_size_inches(10, 9)
     
-    plt.savefig('FigS22B_Clades_PairwiseMeanDistance_' + method + '_Clustermap.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
+    plt.savefig('FigS22B_Clades_PairwiseMeanDistance_' + method + '_Clustermap.tif', bbox_inches='tight', dpi=600)
     plt.close()
 
 
