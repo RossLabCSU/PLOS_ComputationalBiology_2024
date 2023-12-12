@@ -163,7 +163,7 @@ def plotting(domain, goterms, go_categories, perc_orgs, lcd_classes, plotting_ca
     fig = plt.gcf()
     fig.set_size_inches(20, 6.5)
     plt.xlim(-1, num_terms_plotting)
-    plt.savefig('FigS10B_CX-LCDs_Top' + str(num_terms_plotting) + '_GOterms_MammalsOnly.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
+    plt.savefig('FigS10B_CX-LCDs_Top' + str(num_terms_plotting) + '_GOterms_MammalsOnly.tif', bbox_inches='tight', dpi=600)
     plt.close()
     
 
