@@ -4,13 +4,13 @@ plt.rcParams["font.family"] = "Arial"
 plt.rcParams["font.size"] = 14
 import seaborn as sns
 import upsetplot as usp
-import pandas as pd
+
 domains = ['Archaea','Bacteria','Eukaryota','Viruses']
-organism_to_filenum = {'Human':'Fig2A', 'Bovine':'Fig2B', 'Dog':'Fig2C', 'Mouse':'Fig2D', 'Rat':'Fig2E', 'Pig':'Fig2F'}
+organism_to_filenum = {'Human':'Fig3B', 'Bovine':'Fig3C', 'Dog':'Fig3D', 'Mouse':'Fig3E', 'Rat':'Fig3F', 'Pig':'Fig3G'}
 
 def main():
 
-    h = open('TableS6_ModelOrganisms_KeratinAssociated_CrichSubset.tsv')
+    h = open('TableS7_ModelOrganisms_KeratinAssociated_CrichSubset.tsv')
     header = h.readline()
     all_classes = {}
 
@@ -38,7 +38,7 @@ def main():
             plt.yticks([0, 2, 4, 6, 8, 10])
 
         plt.title(organism)
-        plt.savefig(organism_to_filenum[organism] + '_' + organism + '_KeratinAssociatedProteins_UpSetPlot.tif', bbox_inches='tight', dpi=600)
+        plt.savefig(organism_to_filenum[organism] + '_' + organism + '_KeratinAssociatedProteins_UpSetPlot.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
         plt.close()
 
 
