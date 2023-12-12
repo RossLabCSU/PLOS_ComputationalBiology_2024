@@ -70,7 +70,7 @@ def plot_categorical_matrix(matrix, data_type):
     
     fig = plt.gcf()
     fig.set_size_inches(14, 10)
-    plt.savefig('Fig8_VariedCompThreshold_' + data_type + '_CategoricalWinner_PerResidueLCDoccupancies.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
+    plt.savefig('Fig8_VariedCompThreshold_' + data_type + '_CategoricalWinner_PerResidueLCDoccupancies.tif', bbox_inches='tight', dpi=600)
     plt.close()
         
     
