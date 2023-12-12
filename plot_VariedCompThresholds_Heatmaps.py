@@ -79,7 +79,7 @@ def plot_matrix(matrix, domain, data_type):
         plt.plot((0, 80), (i, i), color=linecolor)
     fig = plt.gcf()
     fig.set_size_inches(10, 8)
-    plt.savefig('FigS3_' + domain + '_VariedCompThreshold_' + data_type + '.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
+    plt.savefig('FigS3_' + domain + '_VariedCompThreshold_' + data_type + '.tif', bbox_inches='tight', dpi=600)
     plt.close()
     
     
@@ -111,7 +111,7 @@ def plot_categorical_matrix(matrix, data_type):
         plt.plot((0, 80), (i, i), color='white')
     fig = plt.gcf()
     fig.set_size_inches(14, 10)
-    plt.savefig('FigS4_VariedCompThreshold_' + data_type + '_CategoricalWinner.tif', bbox_inches='tight', dpi=600, pil_kwargs={'compression':'tiff_lzw'})
+    plt.savefig('FigS4_VariedCompThreshold_' + data_type + '_CategoricalWinner.tif', bbox_inches='tight', dpi=600)
     plt.close()
 
 
