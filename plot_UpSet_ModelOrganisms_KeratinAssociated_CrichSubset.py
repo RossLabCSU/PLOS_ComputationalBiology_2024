@@ -10,7 +10,7 @@ organism_to_filenum = {'Human':'Fig3B', 'Bovine':'Fig3C', 'Dog':'Fig3D', 'Mouse'
 
 def main():
 
-    h = open('TableS7_ModelOrganisms_KeratinAssociated_CrichSubset.tsv')
+    h = open('TableS8_ModelOrganisms_KeratinAssociated_CrichSubset.tsv')
     header = h.readline()
     all_classes = {}
 
