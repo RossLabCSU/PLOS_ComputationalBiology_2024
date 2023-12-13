@@ -21,7 +21,7 @@ def main():
     for i, lcd_class_of_interest in enumerate(['HL', 'NH', 'NM']):
         fig_label = fig_labels[i]
 
-        h = open('TableS6_GOterm_Summary_AllOrganisms_AllClasses.tsv')
+        h = open('TableS7_GOterm_Summary_AllOrganisms_AllClasses.tsv')
             
         goterms = []
         perc_orgs = []
