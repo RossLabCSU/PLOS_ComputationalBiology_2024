@@ -58,7 +58,7 @@ def main():
 
 def output_data(df, org_count, domain):
 
-    output = open('TableS6_GOterm_Summary_AllOrganisms_AllClasses.tsv', 'w')
+    output = open('TableS7_GOterm_Summary_AllOrganisms_AllClasses.tsv', 'w')
     output.write('\t'.join(['Domain of Life', 'LCD Class', 'GO term ID', 'GO term Category', 'GO term Description', 'Number of Organisms with GO term Significantly Enriched', 'Total Number of Organisms Analyzed', 'Percentage of Organisms with GO term Significantly Enriched', 'Sidak-corrected p-values (semicolon-delimited)', 'Corresponding Organism UniProt IDs (semicolon-delimited)', 'Percentage of GO term-Associated Proteins in Background Proteome']) + '\n')
     for domain in domains:
         total_orgs = org_count[domain]
