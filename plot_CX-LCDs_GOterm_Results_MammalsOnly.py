@@ -20,7 +20,7 @@ def main():
                 
     output = open('Mammals_' + lcd_class_of_interest + 'richLCDs_from_AllEukaryotesGOresults.tsv', 'w')
 
-    h = open('TableS6_GOterm_Summary_AllOrganisms_AllClasses.tsv')
+    h = open('TableS7_GOterm_Summary_AllOrganisms_AllClasses.tsv')
         
     goterms = []
     perc_orgs = []
