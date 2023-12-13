@@ -18,7 +18,7 @@ lcd_classes += [aa + 'C' for aa in amino_acids if aa != 'C']
 def main():
 
     num_prots_threshold = 1
-    output = open('TableS7_ModelOrganisms_KeratinAssociated_CrichSubset.tsv', 'w')
+    output = open('TableS8_ModelOrganisms_KeratinAssociated_CrichSubset.tsv', 'w')
     output.write('\t'.join(['Proteome', 'Scientific Name', 'Common Name', 'LCD Class', 'Proteins']) + '\n')
 
     uniprot_to_sciname, uniprot_to_commonname = get_proteome_map()
