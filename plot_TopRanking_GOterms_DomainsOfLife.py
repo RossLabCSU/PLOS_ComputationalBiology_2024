@@ -20,7 +20,7 @@ def main():
         else:
             num_terms_plotting = 25
 
-        h = open('TableS6_GOterm_Summary_AllOrganisms_AllClasses.tsv')
+        h = open('TableS7_GOterm_Summary_AllOrganisms_AllClasses.tsv')
 
         goterms = []
         perc_orgs = []
