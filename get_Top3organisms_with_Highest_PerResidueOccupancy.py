@@ -25,7 +25,7 @@ def main():
     perc_in_lcds_df, proteomes_df, org_info = get_data('LCDfrequency_data_PerResidue_LCDoccupancy.tsv')
     mean_percs_df = get_domain_wide_mean_percs('LCDfrequency_data_PerResidue_LCDoccupancy.tsv')
     
-    output = open('TableS9_PerResidueLevelStatistics_Top' + str(top_x_threshold) + 'values_for_LCDclasses.tsv', 'w')
+    output = open('TableS11_PerResidueLevelStatistics_Top' + str(top_x_threshold) + 'values_for_LCDclasses.tsv', 'w')
     header = ['LCD Class', 'Domain of Life', 'Maximum Value', 'Value Category', 'Proteome', 'Scientific Name', 'Common Name (when available)', 'Total Proteins in Proteome', 'Total Number of AAs in Proteome (only proteins at least ' + str(window_size) + 'aa in length)', 'Domain-Wide Mean Percentage of Proteome in LCDs']
     output.write('\t'.join(header) + '\n')
     for domain in domains:
