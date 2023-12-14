@@ -14,7 +14,7 @@ def main():
             'Category':[]}
             
     label = 'Number of Organisms with\n' + r'$\geq$' + minimum_prots_threshold + ' LCD-containing Proteins'
-    fig_label = 'Fig3A_Number of Organisms with geq' + minimum_prots_threshold + ' LCD-containing Proteins'
+    fig_label = 'Fig4_Number of Organisms with geq' + minimum_prots_threshold + ' LCD-containing Proteins'
     
     for line in h:
         items = line.rstrip().split('\t')
