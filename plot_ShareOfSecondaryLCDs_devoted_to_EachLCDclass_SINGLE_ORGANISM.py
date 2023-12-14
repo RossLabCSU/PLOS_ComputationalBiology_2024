@@ -5,7 +5,7 @@ from matplotlib.patches import Patch
 import os
 
 all_proteomes = ['UP000005640_9606', 'UP000002311_559292']
-fig_labels = ['Fig9B', 'Fig9C']
+fig_labels = ['Fig12B', 'Fig12C']
 
 amino_acids = 'ACDEFGHIKLMNPQRSTVWY'
 aa_strings = []
