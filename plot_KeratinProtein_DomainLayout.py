@@ -4,7 +4,7 @@ import seaborn as sns
 from Bio import SeqIO
 import os
 proteomes = ['UP000000589_10090', 'UP000002494_10116', 'UP000005640_9606', 'UP000008227_9823', 'UP000009136_9913', 'UP000002254_9615']
-organism_to_filenum = {'Human':'FigS2', 'Bovine':'FigS4B', 'Mouse':'FigS3', 'Rat':'FigS4A', 'Pig':'FigS4C', 'Dog':'FigS4D'}
+organism_to_filenum = {'Human':'FigS11', 'Bovine':'FigS13B', 'Mouse':'FigS12', 'Rat':'FigS13A', 'Pig':'FigS13C', 'Dog':'FigS13D'}
 
 def main():
 
@@ -70,7 +70,7 @@ def get_keratin_seqs(prot_to_proteome):
     
 def get_keratin_IDs():
 
-    h = open('TableS6_ModelOrganisms_KeratinAssociated_CrichSubset.tsv')
+    h = open('TableS8_ModelOrganisms_KeratinAssociated_CrichSubset.tsv')
     header = h.readline()
     
     df = {}
