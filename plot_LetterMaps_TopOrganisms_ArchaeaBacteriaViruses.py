@@ -13,7 +13,7 @@ amino_acids = 'ACDEFGHIKLMNPQRSTVWY'
 ordered_aas = 'ILVFWYMCQNPGASTDEKRH'
 
 domains = ['Archaea','Bacteria','Viruses']
-domain_to_filenum = {'Archaea':'FigS9B', 'Bacteria':'FigS9D', 'Viruses':'FigS9F'}
+domain_to_filenum = {'Archaea':'FigS21B', 'Bacteria':'FigS21D', 'Viruses':'FigS21F'}
 aa_strings = []
 for res1 in amino_acids:
     for res2 in amino_acids:
@@ -29,7 +29,7 @@ def main():
     colors = sns.color_palette('Set2')
 
     for domain in domains:
-        file = 'TableS9_PerResidueLevelStatistics_Top3values_for_LCDclasses.tsv'
+        file = 'TableS11_PerResidueLevelStatistics_Top3values_for_LCDclasses.tsv'
         top_x_orgs = num_of_orgs_df[domain]
         top_x_counts, top_x_scinames, top_x_commonnames = get_frequent_orgs(file, top_x_orgs, domain, category_of_interest)
 
