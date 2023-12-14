@@ -11,7 +11,7 @@ amino_acids = 'ACDEFGHIKLMNPQRSTVWY'
 ordered_aas = 'ILVFWYMCQNPGASTDEKRH'
 
 domains = ['Archaea','Bacteria','Eukaryota','Viruses']
-domain_to_filenum = {'Archaea':'Fig6A', 'Bacteria':'Fig6B', 'Eukaryota':'Fig6C', 'Viruses':'Fig6D'}
+domain_to_filenum = {'Archaea':'Fig9A', 'Bacteria':'Fig9B', 'Eukaryota':'Fig9C', 'Viruses':'Fig9D'}
 
 def main():
 
@@ -33,7 +33,7 @@ def main():
                 'Organism Rank':[],
                 'Organism Label':[],
                 'Total Proteins':[]}
-        h = open('TableS9_PerResidueLevelStatistics_Top3values_for_LCDclasses.tsv')
+        h = open('TableS11_PerResidueLevelStatistics_Top3values_for_LCDclasses.tsv')
         header = h.readline()
         mean_prots, stdev_prots, total_orgs = get_mean_num_proteins(domain)
         output.write('\t'.join([str(x) for x in (domain, total_orgs, mean_prots, stdev_prots)]) + '\n')
