@@ -11,7 +11,7 @@ def main():
     category = 'PerResidueLCDoccupancy'
     for domain in domains:
         ordered_aas = ordered_aas_df[domain]
-        file = 'TableS9_PerResidueLevelStatistics_Top3values_for_LCDclasses.tsv'
+        file = 'TableS11_PerResidueLevelStatistics_Top3values_for_LCDclasses.tsv'
         
         df, orgs_df = get_data(file, category, domain)
         mat, orgs_mat = construct_matrix(df, orgs_df, category, ordered_aas)
