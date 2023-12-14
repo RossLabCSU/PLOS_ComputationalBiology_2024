@@ -103,7 +103,7 @@ def plotting(df, matrix, domain, mask_diagonal=False):
 
     plt.ylim(20, 0)
     fig = plt.gcf()
-    plt.savefig('FigS5B_' + domain + '_MaxPercentLCDproteins_with_SinglePfamClan.tif', bbox_inches='tight', dpi=600)
+    plt.savefig('FigS14B_' + domain + '_MaxPercentLCDproteins_with_SinglePfamClan.tif', bbox_inches='tight', dpi=600)
     plt.close()
     
         
