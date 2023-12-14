@@ -7,7 +7,7 @@ def main():
 
     goterm_freq_threshold = 30
 
-    output = open('TableS8_Summarized_GOtermResults_HQproteins.tsv', 'w')
+    output = open('TableS9_Summarized_GOtermResults_HQproteins.tsv', 'w')
     counts, goterms, go_categories, output = get_GO_results('Eukaryota_GOterm_Summary_AllOrganisms_AllClasses.tsv', goterm_freq_threshold, output, 'All HQ Proteins')
     counts_Xexcluded, goterms_Xexcluded, go_categories_Xexcluded, output = get_GO_results('HQ_GOresults_QX-XQ-HX-XH_excluded_GOterm_Summary.tsv', goterm_freq_threshold, output, 'QX-XQ-HX-XH Proteins Excluded')
     counts_allQexcluded, goterms_allQexcluded, go_categories_allQexcluded, output = get_GO_results('HQ_GOresults_QrichPrimary_excluded_GOterm_Summary.tsv', goterm_freq_threshold, output, 'Proteins with Q-rich Primary LCDs Excluded')
