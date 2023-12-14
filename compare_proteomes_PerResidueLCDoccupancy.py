@@ -87,9 +87,9 @@ def plot_primAA_barplots(vals, sorted_prim_aas, data_labels, yaxis_label, proteo
     fig = plt.gcf()
     fig.set_size_inches(5, 3.25)
     if proteome2 == 'Percentile':
-        plt.savefig('Fig10A_' + proteome1 + '_' + yaxis_label + '_PrimaryLCD_PerResidueOccupancy_Barplot.tif', bbox_inches='tight', dpi=600)
+        plt.savefig('Fig13A_' + proteome1 + '_' + yaxis_label + '_PrimaryLCD_PerResidueOccupancy_Barplot.tif', bbox_inches='tight', dpi=600)
     else:
-        plt.savefig('Fig10B_' + proteome1 + '_vs_' + proteome2 + '_' + yaxis_label + '_PrimaryLCD_PerResidueOccupancy_Barplot.tif', bbox_inches='tight', dpi=600)
+        plt.savefig('Fig13B_' + proteome1 + '_vs_' + proteome2 + '_' + yaxis_label + '_PrimaryLCD_PerResidueOccupancy_Barplot.tif', bbox_inches='tight', dpi=600)
     plt.close()
     
     
@@ -112,7 +112,7 @@ def output_matrices(matrices, labels, sorted_aas):
         df = pd.DataFrame(data=matrix, index=aa_list, columns=aa_list)
         df = df.reindex(index=sorted_aas, columns=sorted_aas)
         
-        df.to_csv('Fig10_' + label + '_HeatmapMatrix.csv')
+        df.to_csv('Fig13_' + label + '_HeatmapMatrix.csv')
         
     
 def sort_columns_ave_value(df, aa_list):
@@ -228,12 +228,12 @@ def plotting(df, proteome1, proteome2, max_offdiag, min_offdiag, center, mask_di
     plt.ylim(20, 0)
     fig = plt.gcf()
     if proteome2 == 'AVERAGE':
-        plt.savefig('Fig10E_' + proteome1 + '_vs_' + proteome2 + '_PerResidueLCDoccupancy_DifferenceMatrix.tif', bbox_inches='tight', dpi=600)
+        plt.savefig('Fig13E_' + proteome1 + '_vs_' + proteome2 + '_PerResidueLCDoccupancy_DifferenceMatrix.tif', bbox_inches='tight', dpi=600)
     else:
         if proteome2 == 'PERCENTILE':
-            plt.savefig('Fig10D_' + proteome1 + '_vs_' + proteome2 + '_PerResidueLCDoccupancy_DifferenceMatrix.tif', bbox_inches='tight', dpi=600)
+            plt.savefig('Fig13D_' + proteome1 + '_vs_' + proteome2 + '_PerResidueLCDoccupancy_DifferenceMatrix.tif', bbox_inches='tight', dpi=600)
         else:
-            plt.savefig('Fig10C_' + proteome1 + '_vs_' + proteome2 + '_PerResidueLCDoccupancy_DifferenceMatrix.tif', bbox_inches='tight', dpi=600)
+            plt.savefig('Fig13C_' + proteome1 + '_vs_' + proteome2 + '_PerResidueLCDoccupancy_DifferenceMatrix.tif', bbox_inches='tight', dpi=600)
     plt.close()
 
     
