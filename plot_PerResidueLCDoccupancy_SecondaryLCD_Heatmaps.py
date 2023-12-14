@@ -10,7 +10,7 @@ ordered_aas_df = {'Archaea':'LVEAGISDRTKPFNYQMHWC',
                 'Viruses':'LASVGETKDIRNPFQYMHWC'}
 
 domains = ['Archaea','Bacteria','Eukaryota','Viruses']
-domain_to_filenum = {'Archaea':'Fig7A', 'Bacteria':'Fig7B', 'Eukaryota':'Fig7C', 'Viruses':'Fig7D'}
+domain_to_filenum = {'Archaea':'Fig10A', 'Bacteria':'Fig10B', 'Eukaryota':'Fig10C', 'Viruses':'Fig10D'}
 
 def main():
 
