@@ -14,10 +14,10 @@ for res1 in amino_acids:
 
 domains = ['Archaea','Bacteria','Eukaryota','Viruses']
 proteomes_of_interest = ['UP000005640_9606', 'UP000001450_36329']
-fig_labels = {('UP000001450_36329', 'lnOR'):'Fig5A',
-            ('UP000001450_36329', 'Statistical Significance'):'Fig5B',
-            ('UP000005640_9606', 'lnOR'):'Fig5C',
-            ('UP000005640_9606', 'Statistical Significance'):'Fig5D'
+fig_labels = {('UP000001450_36329', 'lnOR'):'Fig7A',
+            ('UP000001450_36329', 'Statistical Significance'):'Fig7B',
+            ('UP000005640_9606', 'lnOR'):'Fig7C',
+            ('UP000005640_9606', 'Statistical Significance'):'Fig7D'
             }
 
 def main():
