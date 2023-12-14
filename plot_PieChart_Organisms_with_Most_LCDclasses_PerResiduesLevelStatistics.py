@@ -17,7 +17,7 @@ excluded_orgs = ['Sepia pharaonis', 'Spodoptera litura']
 def main():
 
     for domain_of_interest in domains:
-        file = 'TableS9_PerResidueLevelStatistics_Top3values_for_LCDclasses.tsv'
+        file = 'TableS11_PerResidueLevelStatistics_Top3values_for_LCDclasses.tsv'
 
         h = open(file)
         header = h.readline()
@@ -99,7 +99,7 @@ def piechart(freqs, pfams, domain):
 
     legend = ax.legend(handles=legend_elements, bbox_to_anchor=(0.86, 0, 0.5, 1), loc='center left', handletextpad=0.3, title='Organism', prop={'family':'Arial', 'size':12})
 
-    leaders = {'Archaea':'FigS9A', 'Bacteria':'FigS9C', 'Eukaryota':'Fig8A', 'Viruses':'FigS9E'}
+    leaders = {'Archaea':'FigS21A', 'Bacteria':'FigS21C', 'Eukaryota':'Fig11A', 'Viruses':'FigS21E'}
     plt.setp(legend.get_texts(), fontsize=8, va='bottom')
     fig = plt.gcf()
     fig.set_size_inches(6, 4)
