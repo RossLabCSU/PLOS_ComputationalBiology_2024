@@ -26,7 +26,7 @@ def main():
     colors = sns.color_palette('Set2')
     
     for domain in domains:
-        file = 'TableS9_PerResidueLevelStatistics_Top3values_for_LCDclasses.tsv'
+        file = 'TableS11_PerResidueLevelStatistics_Top3values_for_LCDclasses.tsv'
         top_x_orgs = num_of_orgs_df[domain]
         top_x_counts, top_x_scinames, top_x_commonnames = get_frequent_orgs(file, top_x_orgs, domain, category_of_interest, excluded_orgs)
 
@@ -160,7 +160,7 @@ def plot_xlinks(pos1_vals, pos2_vals, dataset, line_color, prim_aas, domain):
     plt.xticks([])
     sci_name, *junk = dataset.split(' (')
     fig.set_size_inches(5.5, 1.75)
-    plt.savefig('Fig8B_' + domain + '_' + sci_name.replace(' ', '-') + '_LetterMap.tif', bbox_inches='tight', dpi=600)
+    plt.savefig('Fig11B_' + domain + '_' + sci_name.replace(' ', '-') + '_LetterMap.tif', bbox_inches='tight', dpi=600)
     plt.close()
 
 
