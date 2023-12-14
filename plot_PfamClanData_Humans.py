@@ -70,7 +70,7 @@ def plotting(df, organism, plot_label):
     plt.xlim(-1, len(max_counts))
     fig = plt.gcf()
     fig.set_size_inches(20, 5)
-    plt.savefig('FigS5A_' + organism + '_PfamData_Barplot_' + plot_label + '.tif', bbox_inches='tight', dpi=600)
+    plt.savefig('FigS14A_' + organism + '_PfamData_Barplot_' + plot_label + '.tif', bbox_inches='tight', dpi=600)
     plt.close()
     
 
