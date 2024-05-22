@@ -1,8 +1,8 @@
-# Reproduction of Data in [Cascarina (2023)](add link when published)
+# Reproduction of Data in [Cascarina and Ross (2024)](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011372)
 
 Important disclaimer: all code and resulting data have not yet been peer reviewed and are subject to change.
 
-This directory contains all necessary information and code to reproduce the data in [Cascarina (2023)](add link when published). Below is a list of dependencies and associated version numbers used for testing and data analysis:
+This directory contains all necessary information and code to reproduce the data in [Cascarina and Ross (2024), PLOS Comput Biol](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011372). Below is a list of dependencies and associated version numbers used for testing and data analysis:
 
 | Package | Version |
 | ----------- | ----------- |
@@ -40,4 +40,4 @@ To reproduce figures and tables in the paper:
 ## License info
 All code in this directory is subject to the terms of the GPLv3 license (see LICENSE in this directory). If you use data, code, or information contained in this directory or the associated manuscript, please cite:
 
-INCLUDE REFERENCE WHEN PUBLISHED
+Cascarina SM and Ross ED (2024). Identification of Low-Complexity Domains by Compositional Signatures Reveals Class-Specific Frequencies and Functions Across the Domains of Life. _PLOS Comput Biol._ https://doi.org/10.1371/journal.pcbi.1011372
