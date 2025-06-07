@@ -1,7 +1,5 @@
 # Reproduction of Data in [Cascarina and Ross (2024)](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011372)
 
-Important disclaimer: all code and resulting data have not yet been peer reviewed and are subject to change.
-
 This directory contains all necessary information and code to reproduce the data in [Cascarina and Ross (2024), PLOS Comput Biol](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011372). Below is a list of dependencies and associated version numbers used for testing and data analysis:
 
 | Package | Version |
