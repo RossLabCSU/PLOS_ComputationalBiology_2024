@@ -16,7 +16,7 @@ This directory contains all necessary information and code to reproduce the data
 | upsetplot | 0.8.0 |
 
 To reproduce figures and tables in the paper:
-1. Download the required data from Zenodo (NOTE: this is currently only available as a privately shared link provided in the cover letter for peer review purposes. If you do not have this link, the code shared here will fail).
+1. Download the required data from Zenodo ([https://zenodo.org/records/10369078](https://zenodo.org/records/10369078)).
 2. In a single, main directory, extract all files from zipped archives in separate directories with names identical to those of the zipped archives. For example, the files contained in "Archaea.zip" should be unzipped into a folder called "Archaea". At the end of this process, the following directories should exist and should be kept in a single location:
     - Archaea
     - Archaea_SCRAMBLED
